@@ -1,0 +1,40 @@
+.App {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns :repeat(12, 1fr);
+  grid-template-rows:repeat(12, 1fr);
+  background-color: #A27B5C;
+}
+
+.App>.Header{
+  background-color: #3F4E4F;
+  color: azure;
+  grid-column: 12 span;
+  grid-row: 2 span;
+}
+
+.App>.Menu{
+background-color: #A27B5C;
+color:azure;
+grid-column:2 span ;
+grid-row: 8 span;
+border: 3px solid black;
+
+}
+
+.App >.Main {
+  background-color: #A27B5C;
+  color:azure;
+  grid-column:12 span ;
+  grid-row: 8 span;
+  border: 3px solid black; 
+  overflow-y: auto;
+}
+
+.App >.Footer{
+  background-color: #DCD7C9;
+  color: azure;
+  grid-column: 12 span;
+  grid-row: 2 span;
+}

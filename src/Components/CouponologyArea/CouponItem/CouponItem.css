@@ -1,0 +1,59 @@
+
+.CouponItem {
+	display: inline-block;
+    background-color: grey;
+    margin:10px;
+    border:2px dashed white
+
+}
+
+.TodoItem img{
+    width: 100%;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    background-color: wheat;
+    overflow-y: auto;
+
+  }
+  
+.TodoItem >h2{
+    text-align: center;
+}
+
+  .price {
+    color: black;
+    font-size: 22px;
+  }
+
+  .single-line{
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: inherit;
+      height: 75px;
+  }
+  
+  .card .button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+  .card img{
+    width: 225px;
+    height: 150px;
+  }

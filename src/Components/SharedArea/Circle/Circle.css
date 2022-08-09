@@ -1,0 +1,14 @@
+.Circle {
+	
+}
+.nice{
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50%;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    background: darkgoldenrod	
+}
+

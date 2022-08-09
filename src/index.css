@@ -1,0 +1,227 @@
+html, body, #root {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+  
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .flex-col-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .flex-row-none-warp-list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: row;
+    align-items: center;
+  }
+  
+  .flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .link {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 30px;
+    text-decoration: none;
+  }
+  
+  .link:hover {
+    color: #4C3A51;
+    /* border-bottom: 3px solid pink; */
+    font-weight: 700;
+    font-size: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.1s;
+  }
+  .link2 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 30px;
+    text-decoration: none;
+  }
+  
+  .link2:hover {
+    color: burlywood;
+    /* border-bottom: 3px solid pink; */
+    font-weight: 700;
+    font-size: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.1s;
+  }.link3 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 30px;
+    text-decoration: none;
+  }
+  
+  .link3:hover {
+    color:#4C3575;
+    /* border-bottom: 3px solid pink; */
+    font-weight: 700;
+    font-size: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.1s;
+  }
+  .button-success {
+    height: 30px;
+    width: 100px;
+    transition-duration: 0.4s;
+    background-color: #4CAF50;
+    color: white;
+    cursor: none;
+  }
+  
+  .button-success:hover {
+    background-color: white; /* Green */
+    color: #4CAF50;
+  }
+  .button-success:disabled {
+    height: 30px;
+    width: 100px;
+    transition-duration: 0.4s;
+    background-color: #60625f;
+    color: white;
+    cursor:not-allowed;
+  }
+  
+  .button-danger {
+    height: 30px;
+    width: 100px;
+    transition-duration: 0.4s;
+    background-color: red;
+    color: white;
+  
+  }
+  
+  .button-danger:hover {
+    background-color: white; /* red */
+    color: red;
+  }
+  
+  .button {
+    height: 30px;
+    width: 100px;
+    transition-duration: 0.4s;
+    background-color: gray;
+    color: white;
+  
+  }
+  
+  .button:hover {
+    background-color: white; /* gray */
+    color: gray;
+  }
+  
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  
+  
+  }
+  
+  .box {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 10px 10px 2px 2px #888888;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+  }
+  
+  .one-line {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  .form {
+    text-align: start;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  
+  form span {
+    font-weight: 700;
+    color: red;
+  }
+  
+  form .button-app {
+    text-align: center;
+  }
+  
+  input[type=text], input[type=date], input[type=datetime-local], input[type=number], input[type=email], input[type=password] {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 4px 0;
+    box-sizing: border-box;
+    border: none;
+  }
+  
+  input[type=number]:disabled {
+    font-weight: 700;
+  
+    background-color: #88888880;
+  }
+  
+  label {
+    margin-left: 2px;
+    font-weight: 500;
+    display: inline-block;
+    display: inline-block;
+    text-align: start;
+    color:black;
+  }
+
+  .button-options {
+    height: 60px;
+    width: 200px;
+    transition-duration: 0.4s;
+    background-color: slategray;
+    color: white;
+    cursor: none;
+  }
+  
+  .button-options:hover {
+    background-color: white; /* Green */
+    color: slategray;
+  }
+  
+  
