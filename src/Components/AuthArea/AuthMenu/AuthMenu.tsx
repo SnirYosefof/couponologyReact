@@ -16,9 +16,9 @@ function AuthMenu(): JSX.Element {
 },[])
 
   return (
-    <div className="AuthMenu   ">
+    <div className="AuthMenu font  ">
       {isLoggedIn ? (
-        <h3>
+        <h3 >
           Hey {email} <Link className="link" to="Logout"  >Logout</Link>
         </h3>
       ) : (

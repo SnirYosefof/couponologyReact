@@ -23,7 +23,7 @@ function AdminAbility(): JSX.Element {
   };
 
   return (
-    <div className="AdminAbility flex-center">
+    <div className="AdminAbility flex-center ">
       <button className="button-options " onClick={click}>
         {" "}
         Company{" "}

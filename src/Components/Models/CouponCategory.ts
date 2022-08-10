@@ -3,4 +3,5 @@ export enum CouponCategory{
     SHOW="SHOW",
     ELECTRONICS="ELECTRONICS",
     VACATIONS="VACATIONS"
+    
 }

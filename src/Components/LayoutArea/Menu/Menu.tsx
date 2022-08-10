@@ -18,26 +18,26 @@ function Menu(): JSX.Element {
         <div className="Menu">
             {clientType==="ADMINISTRATOR" ? (
         <>
-           <Link className="link" to="home"  >-Home-</Link>
-           <Link className="link" to="admin"> -Admin options-</Link>
-           <Link className="link" to="coupons"> -Coupons-</Link>
+           <Link className="link font" to="home"  >-Home-</Link>
+           <Link className="link font" to="admin"> -Admin options-</Link>
+           <Link className="link font" to="coupons"> -Coupons-</Link>
         </>
       ) : clientType==="CUSTOMER" ?(
         <>
-           <Link className="link" to="home"  >-home-</Link>
-           <Link className="link" to="coupons"> -coupons-</Link>
-           <Link className="link" to="customer/coupns"> -my coupons-</Link>
+           <Link className="link font" to="home"  >-home-</Link>
+           <Link className="link font" to="coupons"> -coupons-</Link>
+           <Link className="link font" to="customer/coupns"> -my coupons-</Link>
 
         </>
       ) : clientType==="COMPANY" ?(
         <>
-           <Link  className="link" to="home">-Home-</Link>
-           <Link  className="link" to="company">-Company option-</Link>
-           <Link className="link" to="coupons"> -Coupons-</Link>
+           <Link  className="link font" to="home">-Home-</Link>
+           <Link  className="link font" to="company">-Company option-</Link>
+           <Link className="link font" to="coupons"> -Coupons-</Link>
 
         </>): <>
-           <Link  className="link" to="home">-Home- </Link>
-           <Link  className="link" to="about">-About-</Link>
+           <Link  className="link font" to="home">-Home- </Link>
+           <Link  className="link font" to="about">-About-</Link>
            </>}
         </div>
     );

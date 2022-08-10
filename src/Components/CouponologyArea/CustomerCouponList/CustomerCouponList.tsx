@@ -35,7 +35,7 @@ function CustomerCouponList(): JSX.Element {
       });
   }, []);
   return (
-    <div className="CustomerCouponList flex-col-center">
+    <div className="CustomerCouponList flex-col-center font2">
       <h1 className="">coupons list</h1>
       <select defaultValue={'All'} onChange={(e) => handleChange(e.target.value)}>
         CouponCategory

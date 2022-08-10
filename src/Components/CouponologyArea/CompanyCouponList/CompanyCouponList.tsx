@@ -31,11 +31,11 @@ function CompanyCouponList(): JSX.Element {
     },[])
 
     return (
-        <div className="CompanyCouponList flex-col-center">
+        <div className="CompanyCouponList flex-col-center font2">
 			<h1>company coupons</h1>
             <CustomLink to="/company/addCoupon"><BsPlusSquare size={42} /></CustomLink>
             {/* {coupons.map(c=><CompanyCouponItem key={c.id} coupons={c}/>)} */}
-            <Table striped bordered hover>
+            <Table striped bordered hover className="font2">
 <thead>
     <tr>
   <th>Id</th>
@@ -64,7 +64,7 @@ function CompanyCouponList(): JSX.Element {
 
       <td>
         {" "}
-        <CustomLink to={`deleteCoupo/${coupons.id}`}>
+        <CustomLink to={`deleteCoupon/${coupons.id}`}>
           <MdDelete size={42} />
         </CustomLink>
       </td>

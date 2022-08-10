@@ -59,7 +59,7 @@ function EditCustomer(): JSX.Element {
         <div className="EditCompany flex-col-center">
         <h1>Edit customer</h1>
   
-  <form onSubmit={handleSubmit(yalla)} className="flex-col-center box">
+  <form onSubmit={handleSubmit(yalla)} className="flex-col-center box font2">
   <label htmlFor="firstName">firstName</label>
         <input {...register("firstName")} type="text" placeholder="firstName" id="firstName"/>
         <span>{errors.firstName?.message}</span> 

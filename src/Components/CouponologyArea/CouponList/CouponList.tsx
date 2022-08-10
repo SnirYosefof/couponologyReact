@@ -35,7 +35,7 @@ function CouponList(): JSX.Element {
   }, []);
 
   return (
-    <div className="CouponList flex-col-center">
+    <div className="CouponList flex-col-center font2">
       <h1 className="">coupons list</h1>
       <select defaultValue={'All'} onChange={(e) => handleChange(e.target.value)}>
         CouponCategory
@@ -46,7 +46,7 @@ function CouponList(): JSX.Element {
         <option value="ELECTRONICS">{CouponCategory.ELECTRONICS}</option>
         <option value="FOOD">{CouponCategory.FOOD}</option>
         <option value="SHOW">{CouponCategory.SHOW}</option>
-        <option value="COMPANY">{CouponCategory.VACATIONS}</option>
+        <option value="VACATIONS">{CouponCategory.VACATIONS}</option>
       </select>
 
       <div className="flex-row-none-wrap-list cards-lists-test">

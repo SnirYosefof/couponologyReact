@@ -11,7 +11,7 @@ function Circle(props:CircleProps): JSX.Element {
 
   
     return (
-        <div className="Circle nice">{props.num}</div>
+        <div className="Circle nice font">total coupon:{props.num}</div>
     );
 }
 

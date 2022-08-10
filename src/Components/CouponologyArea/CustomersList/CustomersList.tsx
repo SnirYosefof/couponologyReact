@@ -8,7 +8,6 @@ import { customersDownloadedAction } from "../../Redux/Store/CustomerAppState";
 import store from "../../Redux/Store/Store";
 import notify from "../../Service/Notify";
 import web from "../../Service/WebApi";
-import CustomersItem from "../CustomersItem/CustomersItem";
 import "./CustomersList.css";
 
 function CustomersList(): JSX.Element {
@@ -27,13 +26,13 @@ function CustomersList(): JSX.Element {
       });
   }, []);
   return (
-    <div className="CustomersList flex-col-center">
+    <div className="CustomersList flex-col-center font2">
       <h1>customer list</h1>
       <CustomLink to="/admin/addCustomer">
         <BsPlusSquare size={42} />
       </CustomLink>
-      <Table striped bordered hover>
-        <thead>
+      <Table striped bordered hover className=" font2">
+        <thead >
             <tr>
           <th>Id</th>
           <th> First name</th>

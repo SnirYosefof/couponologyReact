@@ -42,6 +42,15 @@ html, body, #root {
     justify-content: space-between;
     align-items: center;
   }
+
+  .font{
+    font-family: 'Courier New', monospace;
+    font-size: 15px;
+  }
+  .font2{
+    font-family: 'Times New Roman', serif;
+    font-size: 15px;
+  }
   
   .link {
     color: white;

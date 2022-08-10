@@ -35,7 +35,7 @@ function AddCustomer(): JSX.Element {
       
     
       return (
-        <div className="AddCustomer flex-col-center">
+        <div className="AddCustomer flex-col-center font2">
           <h1>Add customer</h1>
     
                 <form onSubmit={handleSubmit(yalla)} className="flex-col-center box" >

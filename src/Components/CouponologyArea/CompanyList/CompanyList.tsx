@@ -31,13 +31,13 @@ function CompanyList(): JSX.Element {
   }, []);
 
   return (
-    <div className="CompanyList flex-col-center">
+    <div className="CompanyList flex-col-center font2">
       <h1>company list</h1>
       <CustomLink to="/admin/addCompany">
         <BsPlusSquare size={42} />
       </CustomLink>
       <Table striped bordered hover>
-        <thead>
+        <thead className="font2">
           <tr>
             <th>Id</th>
             <th> name</th>

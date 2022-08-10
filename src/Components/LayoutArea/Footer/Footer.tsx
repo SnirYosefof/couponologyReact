@@ -4,9 +4,9 @@ import "./Footer.css";
 
 function Footer(): JSX.Element {
     return (
-        <div className="Footer flex-between">
+        <div className="Footer flex-between font ">
 			<SocialMedia/>
-            <h5 >All right reserved &copy; to Snir Yosefof </h5>	
+            <h4>All right reserved &copy; to Snir Yosefof </h4>	
             <TotalCoupon/>
         </div>
     );

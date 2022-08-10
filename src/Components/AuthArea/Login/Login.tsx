@@ -110,7 +110,7 @@ function Login(): JSX.Element {
     
   return (
     
-   <div className="Login flex-col-center ">
+   <div className="Login flex-col-center font2 ">
      
       <h1>Login</h1>
       <div >
