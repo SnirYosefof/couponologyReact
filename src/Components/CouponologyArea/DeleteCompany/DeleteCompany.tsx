@@ -25,7 +25,7 @@ function DeleteCompany(): JSX.Element {
             store.dispatch(companyssDeletedAction(id))
         })
         .catch(err => {
-            notify.error(err.message);
+            notify.error(err);
             navigate('/admin/companys');
         });
       }
