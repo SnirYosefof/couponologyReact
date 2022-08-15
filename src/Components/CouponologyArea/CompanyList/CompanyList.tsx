@@ -12,6 +12,7 @@ import store from "../../Redux/Store/Store";
 import notify from "../../Service/Notify";
 import web from "../../Service/WebApi";
 import CompanyItem from "../CompanyItem/CompanyItem";
+import TotalCompany from "../TotalCompany/TotalCompany";
 import "./CompanyList.css";
 
 function CompanyList(): JSX.Element {
@@ -51,6 +52,7 @@ function CompanyList(): JSX.Element {
           <CompanyItem key={c.id} company={c} />
         ))}
       </Table>
+      <TotalCompany/>
     </div>
   );
 }

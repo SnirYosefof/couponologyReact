@@ -56,7 +56,7 @@ function CustomerCouponList(): JSX.Element {
         </div>
       ) : (
         <>
-          <h2>You are get no coupon ,go to purchase</h2>
+          <h2>You have no coupons, go purchase some</h2>
           <>
             <iframe
               src="https://giphy.com/embed/NFbjUcDsjUUms"

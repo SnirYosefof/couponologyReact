@@ -6,9 +6,11 @@ import globals from "./Globals";
 import tokenAxios from "./InterceptorAxios";
 
 class WebApi {
+    [x: string]: any;
 private adminApi= globals.urls.admin;
 private companyApi= globals.urls.company;
 private customerApi= globals.urls.customer;
+  
 
 //company
 public async getAllCompany(): Promise<any> {
@@ -24,6 +26,9 @@ public async deleteCompany(id: number): Promise<any> {
     return await tokenAxios.delete<any>(this.adminApi + "deleteCompany/" + id);
 }
 //customer
+public async customerCount(): Promise<any>{
+    return await tokenAxios.get<any>(this.adminApi + "countCustomer")
+}
 public async getAllCustomer(): Promise<any> {
     return await tokenAxios.get<CustomerModel[]>(this.adminApi+"allCustomers");
 }
@@ -45,11 +50,16 @@ public async getAllCoupons(): Promise<any>{
     return await tokenAxios.get<any>(this.adminApi + "allCoupons")
 }
 public async couponCount(): Promise<any>{
-    return await tokenAxios.get<any>(this.adminApi + "count")
+    return await tokenAxios.get<any>(this.adminApi + "countCoupon")
 }
 
 
+
+
 //Company
+public async companyCount(): Promise<any>{
+    return await tokenAxios.get<any>(this.adminApi + "countCompany")
+}
 public async getAllCompanyCoupons(): Promise<any>{
     return await tokenAxios.get<any>(this.companyApi + "coupons")
 }

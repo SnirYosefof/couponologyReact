@@ -26,7 +26,6 @@ function CouponItem(props: CouponItemProps): JSX.Element {
       .then((res) => {
         notify.success("you purchase a coupon!!!!");
         navigate("/buy");
-        store.dispatch(couponAddedAction(res.data))
       })
       .catch((err) => {
         navigate("/coupons");

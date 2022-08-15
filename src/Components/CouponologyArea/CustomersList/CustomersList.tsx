@@ -8,6 +8,7 @@ import { customersDownloadedAction } from "../../Redux/Store/CustomerAppState";
 import store from "../../Redux/Store/Store";
 import notify from "../../Service/Notify";
 import web from "../../Service/WebApi";
+import TotalCustomer from "../TotalCustomer/TotalCustomer";
 import "./CustomersList.css";
 
 function CustomersList(): JSX.Element {
@@ -66,6 +67,7 @@ function CustomersList(): JSX.Element {
           </tbody>
         ))}
       </Table>
+      <TotalCustomer/>
     </div>
   );
 }

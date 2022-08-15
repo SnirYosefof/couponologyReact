@@ -24,7 +24,7 @@ function DeleteCoupon(): JSX.Element {
             store.dispatch(couponDeletedActoin(id))
         })
         .catch(err => {
-            notify.error(err.message);
+            notify.error(err);
             navigate('/company/coupons');
         });
       }

@@ -81,7 +81,7 @@ const yalla = async (coupon: CouponPayLoadModel) => {
         store.dispatch(couponUpdatedAction(res.data))
       })
       .catch((err) => {
-        notify.error("oops :" + err.message);
+        notify.error("oops :" + err);
       });
   };
 
