@@ -33,10 +33,11 @@ function AddCompany(): JSX.Element {
       .then((res) => {
         notify.success("haha new company created!!!!");
         navigate("/admin/companys");
+        console.log(res.data);
         store.dispatch(companyssAddedAction(res.data))
       })
       .catch((err) => {
-        notify.error("oops :" + err);
+        notify.error( err);
       });
   };
   return (

@@ -8,6 +8,7 @@ import { customersDownloadedAction } from "../../Redux/Store/CustomerAppState";
 import store from "../../Redux/Store/Store";
 import notify from "../../Service/Notify";
 import web from "../../Service/WebApi";
+import CustomersItem from "../CustomerItem/CustomerItem";
 import TotalCustomer from "../TotalCustomer/TotalCustomer";
 import "./CustomersList.css";
 
@@ -23,7 +24,7 @@ function CustomersList(): JSX.Element {
         store.dispatch(customersDownloadedAction(res.data));
       })
       .catch((err) => {
-        notify.error(err.message);
+        notify.error(err);
       });
   }, []);
   return (
@@ -44,27 +45,8 @@ function CustomersList(): JSX.Element {
           <th></th>
           </tr>
         </thead>
-        {customers.map((customers, index) => (
-          <tbody>
-            <tr data-index={index}>
-              <td>{customers.id}</td>
-              <td>{customers.firstName}</td>
-              <td>{customers.lastName}</td>
-              <td>{customers.email}</td>
-              <td>{customers.password}</td>
-              <td>
-                {" "}
-                <CustomLink to={`deleteCustomer/${customers.id}`}>
-                  <MdDelete size={42} />
-                </CustomLink>
-              </td>
-              <td>
-                <CustomLink to={`/updateCustomer/${customers.id}`}>
-                  <MdModeEdit size={42} />
-                </CustomLink>
-              </td>
-            </tr>
-          </tbody>
+        {customers?.map((c) => (
+          <CustomersItem key={c.id} customers={c} />
         ))}
       </Table>
       <TotalCustomer/>

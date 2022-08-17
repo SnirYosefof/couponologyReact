@@ -11,12 +11,14 @@ import notify from "../../Service/Notify";
 import { companyssUpdatedAction } from "../../Redux/Store/CompanyAppState";
 
 function EditCompany(): JSX.Element {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const params = useParams();
   const companyId = +(params.id || 0);
 
   const [id, setId] = useState<number>(companyId);
+  console.log(store.getState().companysReducer.companys);
   const [company,setCompany]=useState<CompanyModel> (store.getState().companysReducer.companys.filter(c=>c.id===id)[0])
+  console.log(company);
   const [origin, setOrigin] = useState<CompanyPayloadModel>({
     name: company.name,
     email:company.email,
@@ -38,7 +40,7 @@ const { dirtyFields } = useFormState({
 });
    
 const yalla = async (company: CompanyPayloadModel) => {
-  web
+   web
     .updateCompany(id,company)
     .then((res) => {
       notify.success(" the company updated!!!!");
@@ -46,7 +48,7 @@ const yalla = async (company: CompanyPayloadModel) => {
       store.dispatch(companyssUpdatedAction(res.data))
     })
     .catch((err) => {
-      notify.error("oops :" + err.message);
+      notify.error( err);
     });
 };
 

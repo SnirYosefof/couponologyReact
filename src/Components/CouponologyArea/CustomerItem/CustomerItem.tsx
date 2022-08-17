@@ -1,17 +1,13 @@
+
 import { Table } from "react-bootstrap";
 import { MdDelete, MdModeEdit } from "react-icons/md";
 import { CustomerModel } from "../../Models/UserModel";
 import CustomLink from "../../Redux/CustomLink/CustomLink";
-import "./CustomersItem.css";
 interface CustomersItemProps{
     customers: CustomerModel
 }
-
 function CustomersItem(props: CustomersItemProps): JSX.Element {
     return (
-        <div className="CustomersItem">
-			       <Table striped bordered hover>
-    
         <tbody>
           <tr>
             <td>{props.customers.id}</td>
@@ -23,8 +19,6 @@ function CustomersItem(props: CustomersItemProps): JSX.Element {
             <td> <CustomLink to={`/updateCustomer/${props.customers.id}`}><MdModeEdit size={42} /></CustomLink></td>
           </tr>
         </tbody>
-      </Table>
-        </div>
     );
 }
 

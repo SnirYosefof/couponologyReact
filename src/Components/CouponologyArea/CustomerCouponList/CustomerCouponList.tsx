@@ -31,7 +31,7 @@ function CustomerCouponList(): JSX.Element {
         store.dispatch(couponsDownloadedAction(res.data));
       })
       .catch((err) => {
-        notify.error(err.message);
+        notify.error(err);
       });
   }, []);
   return (

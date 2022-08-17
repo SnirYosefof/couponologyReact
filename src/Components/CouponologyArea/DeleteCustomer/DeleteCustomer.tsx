@@ -24,7 +24,7 @@ function DeleteCustomer(): JSX.Element {
         store.dispatch(customerDeletedActoin(id));
       })
       .catch((err) => {
-        notify.error(err.message);
+        notify.error(err);
         navigate("/admin/customers");
       });
   };

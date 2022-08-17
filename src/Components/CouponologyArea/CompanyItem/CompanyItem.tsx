@@ -1,3 +1,4 @@
+
 import { Table } from "react-bootstrap";
 import { CompanyModel } from "../../Models/UserModel";
 import CustomLink from "../../Redux/CustomLink/CustomLink";
@@ -10,7 +11,7 @@ interface CompanyItemProps {
 }
 function CompanyItem(props: CompanyItemProps): JSX.Element {
     return (
-        <tbody className="font2">
+        <tbody>
           <tr>
             <td>{props.company.id}</td>
             <td>{props.company.name}</td>

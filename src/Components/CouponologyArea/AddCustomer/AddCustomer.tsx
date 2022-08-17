@@ -28,7 +28,7 @@ function AddCustomer(): JSX.Element {
          store.dispatch(customerAddedAction(res.data));
          ;
      })
-         .catch(err =>{notify.error("oops :" +err)})
+         .catch(err =>{notify.error(err)})
      }
      
     

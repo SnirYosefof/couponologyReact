@@ -11,6 +11,7 @@ class Notify {
   }
 
   public error(err: any) {
+  
     this.notification.error(this.extractMsg(err));
   }
   private extractMsg(err: any): string {
