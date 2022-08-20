@@ -56,10 +56,10 @@ function EditCustomer(): JSX.Element {
   };
   
       return (
-        <div className="EditCompany flex-col-center">
+        <div className="EditCompany flex-col-center font">
         <h1>Edit customer</h1>
   
-  <form onSubmit={handleSubmit(yalla)} className="flex-col-center box font2">
+  <form onSubmit={handleSubmit(yalla)} className="flex-col-center box font">
   <label htmlFor="firstName">firstName</label>
         <input {...register("firstName")} type="text" placeholder="firstName" id="firstName"/>
         <span>{errors.firstName?.message}</span> 

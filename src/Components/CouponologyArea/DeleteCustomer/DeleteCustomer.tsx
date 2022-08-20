@@ -30,8 +30,8 @@ function DeleteCustomer(): JSX.Element {
   };
   return (
     <div className="DeleteCompany flex-col-center font2 ">
-      <h1>Delete task</h1>
-      <h3>Are you sure you want to delete task #{id}?</h3>
+      <h1>Delete customer</h1>
+      <h3>Are you sure you want to delete customer #{id}?</h3>
       <div className="flex-row box">
         <button className="button-danger" onClick={yes}>
           yes

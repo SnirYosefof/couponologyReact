@@ -19,6 +19,13 @@ function CouponList(): JSX.Element {
     } else {
         setCoupons(origin)
     }
+} 
+ const handleChange2 = (title: string) => {
+    if (title !== "") {
+        setCoupons(origin.filter(c => c.title === title));
+    } else {
+        setCoupons(origin)
+    }
 }
   useEffect(() => {
     web
@@ -35,8 +42,10 @@ function CouponList(): JSX.Element {
   }, []);
 
   return (
-    <div className="CouponList flex-col-center font2">
-      <h1 className="">coupons list</h1>
+    <div className="CouponList flex-col-center font">
+      <h1 className="">Coupons list</h1>
+      <div className="flex-center">
+      <input className="font-size2" type="text" placeholder="Search one coupon.." name="search" onChange={(e) => handleChange2(e.target.value)}></input>
       <select defaultValue={'All'} onChange={(e) => handleChange(e.target.value)}>
         CouponCategory
         <option value="" disabled={true}>
@@ -48,6 +57,10 @@ function CouponList(): JSX.Element {
         <option value="SHOW">{CouponCategory.SHOW}</option>
         <option value="VACATIONS">{CouponCategory.VACATIONS}</option>
       </select>
+      </div>
+     
+      
+   
 
       <div className="flex-row-none-wrap-list cards-lists-test">
         {coupons?.map((c) => (

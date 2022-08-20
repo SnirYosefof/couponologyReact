@@ -21,7 +21,7 @@ function DeleteCompany(): JSX.Element {
         web.deleteCompany(id)
         .then(res => {
             notify.success('woho deleted successfully');
-            navigate('/admin/companys');
+            navigate('/admin/companies');
             store.dispatch(companyssDeletedAction(id))
         })
         .catch(err => {

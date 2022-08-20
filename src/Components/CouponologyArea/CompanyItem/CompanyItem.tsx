@@ -11,7 +11,7 @@ interface CompanyItemProps {
 }
 function CompanyItem(props: CompanyItemProps): JSX.Element {
     return (
-        <tbody>
+        <tbody className="font">
           <tr>
             <td>{props.company.id}</td>
             <td>{props.company.name}</td>

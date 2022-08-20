@@ -70,7 +70,7 @@ function AddCoupon(): JSX.Element {
   };
 
   return (
-  <div className="AddCoupon  flex-col-center">
+  <div className="AddCoupon  flex-col-center font">
       <h1>add coupon</h1>
        <form onSubmit={handleSubmit(yalla)} className="flex-col-center box">
        <label htmlFor="category">category</label>

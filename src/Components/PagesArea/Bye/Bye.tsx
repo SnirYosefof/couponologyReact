@@ -2,7 +2,7 @@ import "./Bye.css";
 
 function Bye(): JSX.Element {
   return (
-    <div className="Bye flex-col-center font2">
+    <div className="Bye flex-col-center font">
         <h2>See you at the next time</h2>
       <iframe
         src="https://giphy.com/embed/26u4b45b8KlgAB7iM"

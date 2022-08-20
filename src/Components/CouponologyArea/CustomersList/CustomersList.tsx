@@ -13,14 +13,24 @@ import TotalCustomer from "../TotalCustomer/TotalCustomer";
 import "./CustomersList.css";
 
 function CustomersList(): JSX.Element {
+  const [origin, setOrigin] = useState<CustomerModel[]>([]);
   const [customers, setCustomers] = useState<CustomerModel[]>([]);
 
+
+  const handleChange = (firstName: string) => {
+    if (firstName !== "") {
+        setCustomers(origin.filter(c => c.firstName === firstName));
+    } else {
+        setCustomers(origin)
+    }
+}
   useEffect(() => {
     web
       .getAllCustomer()
       .then((res) => {
         notify.success("whoho!");
         setCustomers(res.data);
+        setOrigin(res.data)
         store.dispatch(customersDownloadedAction(res.data));
       })
       .catch((err) => {
@@ -28,13 +38,17 @@ function CustomersList(): JSX.Element {
       });
   }, []);
   return (
-    <div className="CustomersList flex-col-center font2">
-      <h1>customer list</h1>
+    <div className="CustomersList flex-col-center font">
+      <h1>Customers list</h1>
+      <div className="flex-center">
+      <input className="font-size2" type="text" placeholder="Search one customer.." name="search" onChange={(e) => handleChange(e.target.value)}></input>
+      </div>
       <CustomLink to="/admin/addCustomer">
+        Add customer-
         <BsPlusSquare size={42} />
       </CustomLink>
-      <Table striped bordered hover className=" font2">
-        <thead >
+      <Table striped bordered hover >
+        <thead className=" font" >
             <tr>
           <th>Id</th>
           <th> First name</th>

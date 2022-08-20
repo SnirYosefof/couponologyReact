@@ -17,6 +17,16 @@ import "./CompanyList.css";
 
 function CompanyList(): JSX.Element {
   const [companys, setCompanys] = useState<CompanyModel[]>([]);
+  const [origin, setOrigin] = useState<CompanyModel[]>([]);
+
+  const handleChange = (name: string) => {
+    if (name !== "all") {
+        setCompanys(origin.filter(c => c.name === name));
+    } else {
+        setCompanys(origin)
+    }
+}
+
 
   useEffect(() => {
     web
@@ -24,6 +34,7 @@ function CompanyList(): JSX.Element {
       .then((res) => {
         notify.success("whoho!");
         setCompanys(res.data);
+        setOrigin(res.data)
         store.dispatch(companysDownloadedAction(res.data));
       })
       .catch((err) => {
@@ -32,13 +43,17 @@ function CompanyList(): JSX.Element {
   }, []);
 
   return (
-    <div className="CompanyList flex-col-center font2">
-      <h1>company list</h1>
+    <div className="CompanyList flex-col-center font">
+      <h1>Companies list</h1>
+      <div className="flex-center">
+      <input className="font-size2" type="text" placeholder="Search one company.." name="search" onChange={(e) => handleChange(e.target.value)}></input>
+      </div>
       <CustomLink to="/admin/addCompany">
+        Add company
         <BsPlusSquare size={42} />
       </CustomLink>
       <Table striped bordered hover>
-        <thead className="font2">
+        <thead className="font">
           <tr>
             <th>Id</th>
             <th> name</th>

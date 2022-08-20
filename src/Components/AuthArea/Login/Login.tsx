@@ -68,7 +68,7 @@ function Login(): JSX.Element {
           .then((res) => {
             notify.success("login successfully");
             store.dispatch(loginAction(res.data));
-            navigate("/company");
+            navigate("/home");
           })
           .catch((err) => {
             notify.error(err);
@@ -86,7 +86,7 @@ function Login(): JSX.Element {
           .then((res) => {
             notify.success("login successfully");
             store.dispatch(loginAction(res.data));
-            navigate("/admin");
+            navigate("/home");
           })
           .catch((err) => {
             notify.error(err);
@@ -110,7 +110,7 @@ function Login(): JSX.Element {
     
   return (
     
-   <div className="Login flex-col-center font2 ">
+   <div className="Login flex-col-center font ">
      
       <h1>Login</h1>
       <div >

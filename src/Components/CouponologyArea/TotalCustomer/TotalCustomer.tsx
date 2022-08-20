@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
+import { CustomerModel } from "../../Models/UserModel";
 import store from "../../Redux/Store/Store";
 import notify from "../../Service/Notify";
 import web from "../../Service/WebApi";
 import "./TotalCustomer.css";
 
+
 function TotalCustomer(): JSX.Element {
+
     const [num, setNum] = useState(store.getState().customersReducer.customers.length);
     useEffect(() => {
         if (num === 0) {
@@ -20,7 +23,7 @@ function TotalCustomer(): JSX.Element {
     }, [num]);
     return (
         <div className="TotalCustomer">
-			<p>total customer {num}</p>
+			<p>Total customer {num}</p>
         </div>
     );
 }

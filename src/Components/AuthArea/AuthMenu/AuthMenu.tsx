@@ -16,15 +16,15 @@ function AuthMenu(): JSX.Element {
 },[])
 
   return (
-    <div className="AuthMenu font  ">
+    <div className="AuthMenu font    ">
       {isLoggedIn ? (
-        <h3 >
-          Hey {email} <Link className="link" to="Logout"  >Logout</Link>
-        </h3>
+        <div >
+          Hey {email} <Link className="link font-size " to="Logout"  >Logout</Link>
+        </div>
       ) : (
-        <h3>
-          Welcome guest - <Link  className="link" to="login">Login</Link>
-        </h3>
+        <div>
+          Welcome guest - <Link  className="link font-size " to="login">Login</Link>
+        </div>
       )}
     </div>
   );

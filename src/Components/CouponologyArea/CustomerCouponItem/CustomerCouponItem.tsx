@@ -7,8 +7,8 @@ interface CouponItemProps {
   }
 function CustomerCouponItem(props:CouponItemProps): JSX.Element {
     return (
-        <div className="CustomerCouponItem font2">
-			<div className="CouponItem text-dark text-lowercase flex-col-center font2">
+        <div className="CustomerCouponItem font">
+			<div className="CouponItem text-dark text-lowercase flex-col-center font">
       <Card className="color" style={{ width: "14rem" }}>
         <Card.Img variant="top" src={props.coupon.image} />
         <Card.Body className="flex-col-center">

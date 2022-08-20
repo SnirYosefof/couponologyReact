@@ -40,11 +40,11 @@ function Routing(): JSX.Element {
         <Route path="/logout" element={<WantLogOut />} />
         <Route path="/bye" element={<Bye />} />
         <Route path="/admin" element={<AdminAbility />} />
-        <Route path="/admin/companys" element={<ComapnyInformation />} />
+        <Route path="/admin/companies" element={<ComapnyInformation />} />
         <Route path="/admin/customers" element={<CustomersInformtion />} />
         <Route path="/admin/addCompany" element={<AddCompany />} />
         <Route path="updateCompany/:id" element={<EditCompany />} />
-        <Route path="admin/companys/deleteCompany/:id" element={<DeleteCompany />} />
+        <Route path="/admin/companies/deleteCompany/:id" element={<DeleteCompany />} />
         <Route path="/admin/addCustomer" element={<AddCustomer />} />
         <Route path="/updateCustomer/:id" element={<EditCustomer />} />
         <Route path="/coupons" element={<CouponList />} />

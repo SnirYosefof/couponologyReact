@@ -20,7 +20,7 @@ function TotalCompany(): JSX.Element {
     }, [num]);
     return (
         <div className="TotalCompany">
-			<p>total company {num}</p>
+			<p>Total company {num}</p>
         </div>
     );
 }

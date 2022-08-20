@@ -32,7 +32,7 @@ function AddCompany(): JSX.Element {
       .addCompany(company)
       .then((res) => {
         notify.success("haha new company created!!!!");
-        navigate("/admin/companys");
+        navigate("/admin/companies");
         console.log(res.data);
         store.dispatch(companyssAddedAction(res.data))
       })
@@ -41,7 +41,7 @@ function AddCompany(): JSX.Element {
       });
   };
   return (
-    <div className="AddCompany flex-col-center">
+    <div className="AddCompany flex-col-center font">
                 <h1>Add company</h1>
 
       <form onSubmit={handleSubmit(yalla)} className="flex-col-center box">
@@ -51,7 +51,7 @@ function AddCompany(): JSX.Element {
                 <label htmlFor="email">email</label>
                 <input {...register("email")} type="email" placeholder="email" id="email"/>
                 <span>{errors.email?.message}</span>
-                <label htmlFor="password">subject </label>
+                <label htmlFor="password">password </label>
                 <input {...register("password")} type="password" placeholder="password" id="password"/>
                 <span>{errors.password?.message}</span>
                 <button className="button-success" disabled={!isValid}>add</button>

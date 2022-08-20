@@ -17,13 +17,13 @@ public async getAllCompany(): Promise<any> {
     return await tokenAxios.get<CompanyModel[]>(this.adminApi+"allCompanies");
 }
 public async addCompany(company:CompanyModel): Promise<any> {
-    return await tokenAxios.post<CompanyModel>(this.adminApi+"addCompany",company);
+    return await tokenAxios.post<CompanyModel>(this.adminApi,company);
 }
 public async updateCompany(id:number ,company: CompanyModel): Promise<any> {
-    return await tokenAxios.put<any>(this.adminApi + "updateCompany/"+id, company);
+    return await tokenAxios.put<any>(this.adminApi +id, company);
 }
 public async deleteCompany(id: number): Promise<any> {
-    return await tokenAxios.delete<any>(this.adminApi + "deleteCompany/" + id);
+    return await tokenAxios.delete<any>(this.adminApi  + id);
 }
 //customer
 public async customerCount(): Promise<any>{
@@ -33,15 +33,15 @@ public async getAllCustomer(): Promise<any> {
     return await tokenAxios.get<CustomerModel[]>(this.adminApi+"allCustomers");
 }
 public async addCustomer(customer:CustomerModel): Promise<any> {
-    return await tokenAxios.post<CustomerModel>(this.adminApi+"addCustomer",customer);
+    return await tokenAxios.post<CustomerModel>(this.adminApi+"customer",customer);
 }
 public async updateCustomer(id:number ,customer: CustomerPayLoadModel): Promise<any> {
     console.log(customer);
-    return await tokenAxios.put<any>(this.adminApi + "updateCustomer/" + id, customer);
+    return await tokenAxios.put<any>(this.adminApi + "customer/" + id, customer);
 }
 
 public async deleteCustomer(id: number): Promise<any> {
-    return await tokenAxios.delete<any>(this.adminApi + "deleteCustomer/" + id);
+    return await tokenAxios.delete<any>(this.adminApi + "customer/" + id);
 }
 
 //coupon
@@ -70,7 +70,7 @@ public async addCoupon( coupon:CouponModel): Promise<any> {
     return await tokenAxios.post<CompanyModel>(this.companyApi ,coupon);
 }
 public async updateCoupon(id:number ,coupon:CouponModel): Promise<any> {
-    return await tokenAxios.put<CompanyModel>(this.companyApi+"coupons/"+ id,coupon);
+    return await tokenAxios.put<CompanyModel>(this.companyApi+ id,coupon);
 }
 
 //customer

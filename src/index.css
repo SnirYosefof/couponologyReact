@@ -60,10 +60,9 @@ html, body, #root {
   }
   
   .link:hover {
-    color: #4C3A51;
-    /* border-bottom: 3px solid pink; */
+    color: burlywood;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 22px;
     text-decoration: none;
     cursor: pointer;
     transition: 0.1s;
@@ -79,7 +78,7 @@ html, body, #root {
     color: burlywood;
     /* border-bottom: 3px solid pink; */
     font-weight: 700;
-    font-size: 30px;
+    font-size: 24px;
     text-decoration: none;
     cursor: pointer;
     transition: 0.1s;
@@ -94,7 +93,7 @@ html, body, #root {
     color:#4C3575;
     /* border-bottom: 3px solid pink; */
     font-weight: 700;
-    font-size: 30px;
+    font-size: 24px;
     text-decoration: none;
     cursor: pointer;
     transition: 0.1s;
@@ -233,4 +232,10 @@ html, body, #root {
     color: slategray;
   }
   
+  .font-size {
+   font-size: 20px;
+  }
+  .font-size2 {
+   font-size: 10px;
+  }
   

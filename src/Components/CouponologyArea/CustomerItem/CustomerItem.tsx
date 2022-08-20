@@ -8,7 +8,7 @@ interface CustomersItemProps{
 }
 function CustomersItem(props: CustomersItemProps): JSX.Element {
     return (
-        <tbody>
+        <tbody className=" font">
           <tr>
             <td>{props.customers.id}</td>
             <td>{props.customers.firstName}</td>

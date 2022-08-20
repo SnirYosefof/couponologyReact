@@ -85,8 +85,8 @@ const yalla = async (coupon: CouponPayLoadModel) => {
       });
   };
 
-  return (<div className="EditCoupon flex-col-center">
-      <h1>update coupon</h1>
+  return (<div className="EditCoupon flex-col-center font">
+      <h1>Edit coupon</h1>
        <form onSubmit={handleSubmit(yalla)} className="flex-col-center box">
        <label htmlFor="category">category</label>
       <select {...register("category")}  placeholder="category" id="category">

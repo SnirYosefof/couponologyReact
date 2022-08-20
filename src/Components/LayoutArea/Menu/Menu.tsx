@@ -18,26 +18,27 @@ function Menu(): JSX.Element {
         <div className="Menu">
             {clientType==="ADMINISTRATOR" ? (
         <>
-           <Link className="link font" to="home"  >-Home-</Link>
-           <Link className="link font" to="admin"> -Admin options-</Link>
-           <Link className="link font" to="coupons"> -Coupons-</Link>
+           <Link className="link font font-size" to="home"  >|Home|</Link>
+           <Link className="link font font-size" to="/admin/companies"> |Companies|</Link>
+           <Link className="link font font-size" to="/admin/customers"> |Customers|</Link>
+           <Link className="link font font-size" to="coupons"> |Coupons|</Link>
         </>
       ) : clientType==="CUSTOMER" ?(
         <>
-           <Link className="link font" to="home"  >-home-</Link>
-           <Link className="link font" to="coupons"> -coupons-</Link>
-           <Link className="link font" to="customer/coupns"> -my coupons-</Link>
+           <Link className="link font font-size" to="home"  >|home|</Link>
+           <Link className="link font font-size" to="coupons"> |coupons|</Link>
+           <Link className="link font font-size" to="customer/coupns"> |my coupons|</Link>
 
         </>
       ) : clientType==="COMPANY" ?(
         <>
-           <Link  className="link font" to="home">-Home-</Link>
-           <Link  className="link font" to="company">-Company option-</Link>
-           <Link className="link font" to="coupons"> -Coupons-</Link>
+           <Link  className="link font font-size" to="home">|Home|</Link>
+           <Link  className="link font font-size" to="/company/coupons">|Company coupns|</Link>
+           <Link className="link font font-size" to="coupons"> |Coupons|</Link>
 
         </>): <>
-           <Link  className="link font" to="home">-Home- </Link>
-           <Link  className="link font" to="about">-About-</Link>
+           <Link  className="link font font-size" to="home">|Home| </Link>
+           <Link  className="link font font-size" to="about">|About|</Link>
            </>}
         </div>
     );

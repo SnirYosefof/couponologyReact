@@ -15,13 +15,23 @@ import "./CompanyCouponList.css";
 
 function CompanyCouponList(): JSX.Element {
     const [coupons,setCoupons]=useState<CouponModel[]>([]);
+    const [origin, setOrigin] = useState<CouponModel[]>([]);
 
 
+
+    const handleChange = (title: string) => {
+      if (title !== 'all') {
+          setCoupons(origin.filter(c => c.title === title));
+      } else {
+          setCoupons(origin)
+      }
+  }
     useEffect(()=>{
         web.getAllCompanyCoupons()
         .then((res)=>{
             notify.success("whoho!")
             setCoupons(res.data);
+            setOrigin(res.data)
             store.dispatch(couponsDownloadedAction(res.data));
 
         })
@@ -31,12 +41,14 @@ function CompanyCouponList(): JSX.Element {
     },[])
 
     return (
-        <div className="CompanyCouponList flex-col-center font2">
-			<h1>company coupons</h1>
-            <CustomLink to="/company/addCoupon"><BsPlusSquare size={42} /></CustomLink>
-            {/* {coupons.map(c=><CompanyCouponItem key={c.id} coupons={c}/>)} */}
-            <Table striped bordered hover className="font2">
-<thead>
+        <div className="CompanyCouponList flex-col-center font">
+			<h1>Company coupons</h1>
+      <div className="flex-center">
+      <input type="text" placeholder="Search one coupon.." name="search" onChange={(e) => handleChange(e.target.value)}></input>
+      </div>
+            <CustomLink to="/company/addCoupon">Add coupon-<BsPlusSquare size={42} /></CustomLink>
+            <Table striped bordered hover >
+<thead className="font">
     <tr>
   <th>Id</th>
   <th> category</th>
@@ -51,7 +63,7 @@ function CompanyCouponList(): JSX.Element {
   </tr>
 </thead>
 {coupons.map((coupons, index) => (
-  <tbody>
+  <tbody className="font" >
     <tr data-index={index}>
       <td>{coupons.id}</td>
       <td>{coupons.category}</td>

@@ -36,7 +36,7 @@ function CouponItem(props: CouponItemProps): JSX.Element {
     <div className="CouponItem text-dark text-lowercase flex-col-center ">
       <Card className="color " style={{ width: "14rem" }}>
         <Card.Img variant="top" src={props.coupon.image} />
-        <Card.Body className="flex-col-center font2">
+        <Card.Body className="flex-col-center font">
         <Card.Text>
           <Card.Title>
             {props.coupon.title}

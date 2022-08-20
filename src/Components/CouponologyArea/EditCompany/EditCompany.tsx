@@ -44,7 +44,7 @@ const yalla = async (company: CompanyPayloadModel) => {
     .updateCompany(id,company)
     .then((res) => {
       notify.success(" the company updated!!!!");
-      navigate("/admin/companys");
+      navigate("/admin/companies");
       store.dispatch(companyssUpdatedAction(res.data))
     })
     .catch((err) => {
@@ -53,7 +53,7 @@ const yalla = async (company: CompanyPayloadModel) => {
 };
 
     return (
-      <div className="EditCompany flex-col-center">
+      <div className="EditCompany flex-col-center font">
       <h1>Edit company</h1>
 
 <form onSubmit={handleSubmit(yalla)} className="flex-col-center box">
